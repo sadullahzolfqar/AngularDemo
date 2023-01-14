@@ -15,3 +15,14 @@ a suite of developer tools to help. like build , develop , test and update codes
   Simplified MVC PATTERN,
   Code consistency and easy testing.
 
+- ng generate component: create new component or create manuealy
+- Binding:
+  * Property bindig
+  * Event binding
+  * Two way binding
+- Directive:
+  * Component directives
+  * Attribute directives
+  * Structural directives
+-ngIf, ngFor, ngModel
+-Pipes
