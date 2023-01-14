@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Product {
-  name: string;
-  price: Number,
-  image: string
-}
+import { Product } from '../types/product';
 
 @Component({
   selector: 'app-products',
@@ -25,6 +20,13 @@ export class ProductsComponent {
       image: "https://m.media-amazon.com/images/I/61Vsnjewm7L._AC_SX466_.jpg"
     }
   ];
+
+  cards: Product[] = [];
+
+  addToCard(product: Product) {
+    this.cards.push(product);
+    console.log(this.cards);
+  }
 
   // isDisabled:boolean = false;
   search:string = '';

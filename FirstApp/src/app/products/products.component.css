@@ -1,6 +1,10 @@
 ul {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 ul li {
-  display: flex;
+  padding: 10px;
+  text-overflow: none;
+  list-style: none;
 }

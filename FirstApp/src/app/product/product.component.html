@@ -1,0 +1,6 @@
+<div class="product">
+  <img [src]="product.image" [alt]="product.name" class="src" width="100">
+  <h5 class="product-title">{{ product.name | titlecase}}</h5>
+  <h6 class="product-price">{{ product.price | currency }}</h6>
+  <button (click)="addToCard()">Add To Card</button>
+</div>

@@ -1,4 +1,4 @@
-<h4>products List</h4>
+<!-- <h4>products List</h4>
 <button (click)="toggleBooks()">
   <ng-container *ngIf="!isShowing">Show Products</ng-container>
   <ng-container *ngIf="isShowing">Hide Products</ng-container>
@@ -6,16 +6,12 @@
 <br/>
 <br/>
 <input type="text" placeholder="search" [(ngModel)]="search"/>
-{{search}}
+{{search}} -->
 
 <ul *ngIf="isShowing">
-  <ng-container *ngFor="let product of products; let i=index">
+  <ng-container *ngFor="let productItem of products; let i=index">
     <li>
-      <img [src]="product.image" [alt]="product.name" class="src" width="100">
-      <div>
-          <h5>{{ product.name }}</h5>
-          <b>{{ product.price }} $</b>
-      </div>
+      <app-product [product]="productItem" (productEmitter)="addToCard($event)"></app-product>
     </li>
   </ng-container>
 </ul>
