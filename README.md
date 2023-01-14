@@ -24,5 +24,6 @@ a suite of developer tools to help. like build , develop , test and update codes
   * Component directives
   * Attribute directives
   * Structural directives
--ngIf, ngFor, ngModel
--Pipes
+- ngIf, ngFor, ngModel
+
+- Pipes
