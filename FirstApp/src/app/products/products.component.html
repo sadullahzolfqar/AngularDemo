@@ -1,1 +1,21 @@
-<p>products works!</p>
+<h4>products List</h4>
+<button (click)="toggleBooks()">
+  <ng-container *ngIf="!isShowing">Show Products</ng-container>
+  <ng-container *ngIf="isShowing">Hide Products</ng-container>
+</button>
+<br/>
+<br/>
+<input type="text" placeholder="search" [(ngModel)]="search"/>
+{{search}}
+
+<ul *ngIf="isShowing">
+  <ng-container *ngFor="let product of products; let i=index">
+    <li>
+      <img [src]="product.image" [alt]="product.name" class="src" width="100">
+      <div>
+          <h5>{{ product.name }}</h5>
+          <b>{{ product.price }} $</b>
+      </div>
+    </li>
+  </ng-container>
+</ul>
