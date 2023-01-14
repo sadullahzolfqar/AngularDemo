@@ -1,7 +1,7 @@
 # Learning Angular framework fundemental
 This repository is for learning angular framework.
 
-1. What is angular:
+- What is angular:
 angular is a framework for building single-page applications using html and typscript. Angular is written in typescript.
 and is a compnonent-based framework for building a scalable web applications.
 it includes forms management , routing , client-server communication and more.
