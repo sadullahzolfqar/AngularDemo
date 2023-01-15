@@ -12,7 +12,8 @@
 <ul *ngIf="isShowing">
   <ng-container *ngFor="let productItem of products; let i=index">
     <li>
-      <app-product [product]="productItem" (productEmitter)="addToCard($event)"></app-product>
+      <!-- <app-product [product]="productItem" (productEmitter)="addToCard($event)"></app-product> -->
+      <app-product [product]="productItem"></app-product>
     </li>
   </ng-container>
 </ul>

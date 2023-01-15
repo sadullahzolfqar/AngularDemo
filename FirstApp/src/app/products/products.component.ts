@@ -19,14 +19,8 @@ export class ProductsComponent implements OnInit {
 
   products:Product[] = [];
 
-  cards: Product[] = [];
+  // cards: Product[] = [];
 
-  addToCard(product: Product) {
-    this.cards.push(product);
-    console.log(this.cards);
-  }
-
-  // isDisabled:boolean = false;
   search:string = '';
   isShowing: boolean = true;
 
@@ -34,6 +28,9 @@ export class ProductsComponent implements OnInit {
     this.isShowing = !this.isShowing;
   }
 
+  // addToCard(product: Product) {
+  //   this.cards.push(product);
+  // }
   // showProduct() {
   //   this.isDisabled = !this.isDisabled;
   // }

@@ -1,0 +1,10 @@
+<h1>Cart List</h1>
+
+<p *ngIf="!getCarts().length">Your cart is empty</p>
+<ul *ngIf="getCarts().length">
+  <ng-container *ngFor="let cartItem of getCarts(); let i=index">
+    <li>
+      <p>{{cartItem.name}}</p>
+    </li>
+  </ng-container>
+</ul>

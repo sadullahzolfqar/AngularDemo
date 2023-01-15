@@ -1,6 +1,7 @@
 import { OnInit } from '@angular/core';
 import { OnDestroy } from '@angular/core';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { CartService } from 'src/app/cart/cart.service';
 import { Product } from '../../types/product';
 
 @Component({
@@ -9,14 +10,16 @@ import { Product } from '../../types/product';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit, OnDestroy {
-  constructor() {
-    console.log({ constructor: "contructor"});
+  constructor(private cartService: CartService) {
+    // console.log({ constructor: "contructor"});
   }
 
-  interval: any = null;
+  isInCart: boolean = false;
+
+  // interval: any = null;
 
   ngOnInit(): void {
-    console.log({ onInit: "onInit"});
+    //console.log({ onInit: "onInit"});
     // this.interval = setInterval(() => {
     //   console.log("Hello");
     // }, 1000)
@@ -24,13 +27,20 @@ export class ProductComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     // clearInterval(this.interval);
-    console.log({ destroy: "OnDestroy"});  
+    //console.log({ destroy: "OnDestroy"});  
   }
 
   @Input() product: Product = {} as Product;
-  @Output() productEmitter = new EventEmitter<Product>();
+  // @Output() productEmitter = new EventEmitter<Product>();
 
   addToCard() {
-    this.productEmitter.emit(this.product);
+    this.isInCart = true;
+    this.cartService.add(this.product);
+    // this.productEmitter.emit(this.product);
+  }
+
+  removeFromCard() {
+    this.isInCart = false;
+    this.cartService.remove(this.product);
   }
 }
