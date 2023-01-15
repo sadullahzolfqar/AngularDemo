@@ -27,3 +27,12 @@ a suite of developer tools to help. like build , develop , test and update codes
 - ngIf, ngFor, ngModel
 
 - Pipes
+- Lifecycle hooks
+  * ngOnInit()
+  * ngOnChange()
+  * ngDoCheck()
+  * ngAfterContentInit()
+  * ngAfterContentChecked()
+  * ngAfterViewInit()
+  * ngAfterViewChecked()
+  * ngOnDestroy
