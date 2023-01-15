@@ -1,25 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../types/product';
+import { ProductsService } from './products.service';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
 
-  products:Product[] = [
-    {
-      name: 'Wireless Gaming Headset',
-      price : 41,
-      image: "https://m.media-amazon.com/images/I/71EMuxMps5L._SX522_.jpg"
-    },
-    {
-      name: 'IPhone 14 Pro Max',
-      price : 1100,
-      image: "https://m.media-amazon.com/images/I/61Vsnjewm7L._AC_SX466_.jpg"
-    }
-  ];
+  constructor(private  productsService: ProductsService) {
+    // this.products = productsService.fetchProducts();
+  }
+
+  ngOnInit(): void {
+    this.products = this.productsService.fetchProducts();
+  }
+
+  products:Product[] = [];
 
   cards: Product[] = [];
 

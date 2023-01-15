@@ -1,7 +1,7 @@
 import { OnInit } from '@angular/core';
 import { OnDestroy } from '@angular/core';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Product } from '../types/product';
+import { Product } from '../../types/product';
 
 @Component({
   selector: 'app-product',
