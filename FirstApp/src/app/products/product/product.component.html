@@ -1,7 +1,15 @@
-<div class="product">
-  <img [src]="product.image" [alt]="product.name" class="src" width="100">
-  <h5 class="product-title">{{ product.name | titlecase}}</h5>
-  <h6 class="product-price">{{ product.price | currency }}</h6>
-  <button *ngIf="!isInCart" (click)="addToCard()">Add To Cart</button>
-  <button *ngIf="isInCart" (click)="removeFromCard()">Remove From Cart</button>
-</div>
+<a href="#" class="group">
+  <div class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+    <img [src]="product.image" [alt]="product.name" class="h-full w-full object-cover object-center group-hover:opacity-75" height="150" width="100">
+  </div>
+  <div class="flex">
+    <div>
+      <h3 class="mt-4 text-sm text-gray-700">{{ product.name | titlecase}}</h3>
+      <p class="mt-1 text-lg font-medium text-gray-900">{{ product.price | currency }}</p>
+    </div>
+    <div>
+      <button *ngIf="!isInCart" (click)="addToCard()">Add To Cart</button>
+      <button *ngIf="isInCart" (click)="removeFromCard()">Remove From Cart</button>
+    </div>
+  </div>
+</a>
